@@ -1,0 +1,99 @@
+Method CreateCar:Entity()
+
+    'Set scale
+    Local scale:Float = 64.0
+
+    'Create Polygon List
+    Local pList:List<Polygon> = New List<Polygon>
+
+    'Create vertices array
+    Local vertices:b2Vec2[]
+
+    'Polygon1
+    vertices = New b2Vec2[3]
+    vertices[0] = New b2Vec2(-97.000/scale, 5.500/scale)
+    vertices[1] = New b2Vec2(-44.000/scale, 21.500/scale)
+    vertices[2] = New b2Vec2(-92.000/scale, 22.500/scale)
+    pList.AddLast(New Polygon(vertices, 3))
+
+    'Polygon2
+    vertices = New b2Vec2[5]
+    vertices[0] = New b2Vec2(83.000/scale, 22.500/scale)
+    vertices[1] = New b2Vec2(87.000/scale, 3.500/scale)
+    vertices[2] = New b2Vec2(97.000/scale, 7.500/scale)
+    vertices[3] = New b2Vec2(97.000/scale, 12.500/scale)
+    vertices[4] = New b2Vec2(92.000/scale, 23.500/scale)
+    pList.AddLast(New Polygon(vertices, 5))
+
+    'Polygon3
+    vertices = New b2Vec2[5]
+    vertices[0] = New b2Vec2(-64.000/scale, 33.500/scale)
+    vertices[1] = New b2Vec2(-73.000/scale, 26.500/scale)
+    vertices[2] = New b2Vec2(-74.000/scale, 22.500/scale)
+    vertices[3] = New b2Vec2(-44.000/scale, 21.500/scale)
+    vertices[4] = New b2Vec2(-51.000/scale, 31.500/scale)
+    pList.AddLast(New Polygon(vertices, 5))
+
+    'Polygon4
+    vertices = New b2Vec2[8]
+    vertices[0] = New b2Vec2(72.000/scale, 33.500/scale)
+    vertices[1] = New b2Vec2(61.000/scale, 34.500/scale)
+    vertices[2] = New b2Vec2(52.000/scale, 23.500/scale)
+    vertices[3] = New b2Vec2(84.000/scale, -15.500/scale)
+    vertices[4] = New b2Vec2(86.000/scale, -13.500/scale)
+    vertices[5] = New b2Vec2(87.000/scale, 3.500/scale)
+    vertices[6] = New b2Vec2(83.000/scale, 22.500/scale)
+    vertices[7] = New b2Vec2(79.000/scale, 29.500/scale)
+    pList.AddLast(New Polygon(vertices, 8))
+
+    'Polygon5
+    vertices = New b2Vec2[8]
+    vertices[0] = New b2Vec2(-74.000/scale, -9.500/scale)
+    vertices[1] = New b2Vec2(-38.000/scale, -18.500/scale)
+    vertices[2] = New b2Vec2(40.000/scale, -34.500/scale)
+    vertices[3] = New b2Vec2(84.000/scale, -15.500/scale)
+    vertices[4] = New b2Vec2(52.000/scale, 23.500/scale)
+    vertices[5] = New b2Vec2(50.000/scale, 23.500/scale)
+    vertices[6] = New b2Vec2(-95.000/scale, 5.500/scale)
+    vertices[7] = New b2Vec2(-95.000/scale, -1.500/scale)
+    pList.AddLast(New Polygon(vertices, 8))
+
+    'Polygon6
+    vertices = New b2Vec2[3]
+    vertices[0] = New b2Vec2(52.000/scale, 23.500/scale)
+    vertices[1] = New b2Vec2(61.000/scale, 34.500/scale)
+    vertices[2] = New b2Vec2(57.000/scale, 32.500/scale)
+    pList.AddLast(New Polygon(vertices, 3))
+
+    'Polygon7
+    vertices = New b2Vec2[3]
+    vertices[0] = New b2Vec2(40.000/scale, -34.500/scale)
+    vertices[1] = New b2Vec2(-38.000/scale, -18.500/scale)
+    vertices[2] = New b2Vec2(-9.000/scale, -32.500/scale)
+    pList.AddLast(New Polygon(vertices, 3))
+
+    'Polygon8
+    vertices = New b2Vec2[3]
+    vertices[0] = New b2Vec2(84.000/scale, -15.500/scale)
+    vertices[1] = New b2Vec2(40.000/scale, -34.500/scale)
+    vertices[2] = New b2Vec2(55.000/scale, -32.500/scale)
+    pList.AddLast(New Polygon(vertices, 3))
+
+    'Polygon9
+    vertices = New b2Vec2[3]
+    vertices[0] = New b2Vec2(-44.000/scale, 21.500/scale)
+    vertices[1] = New b2Vec2(50.000/scale, 23.500/scale)
+    vertices[2] = New b2Vec2(-44.000/scale, 23.500/scale)
+    pList.AddLast(New Polygon(vertices, 3))
+
+    'Polygon10
+    vertices = New b2Vec2[4]
+    vertices[0] = New b2Vec2(-97.000/scale, 5.500/scale)
+    vertices[1] = New b2Vec2(-95.000/scale, 5.500/scale)
+    vertices[2] = New b2Vec2(50.000/scale, 23.500/scale)
+    vertices[3] = New b2Vec2(-44.000/scale, 21.500/scale)
+    pList.AddLast(New Polygon(vertices, 4))
+
+    Return(Self.world.CreateMultiPolygon(960, 540, pList, True))
+
+End Method
